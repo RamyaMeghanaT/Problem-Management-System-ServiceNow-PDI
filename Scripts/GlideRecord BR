@@ -1,0 +1,13 @@
+##GlideRecord (Bussiness Rule)
+
+(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+	var gr = new GlideRecord("u_problem_management_system");
+	gr.addQuery("short_description",current.short_description);
+	gr.query();
+	if(gr.next()){
+		gs.info("Similar Problem Found!!! " + gr.getValue("number"));
+	}
+
+})(current, previous);
