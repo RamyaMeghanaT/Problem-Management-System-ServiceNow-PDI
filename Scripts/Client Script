@@ -1,0 +1,73 @@
+##Client Script
+
+### Impact
+
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+   var imp = g_form.getValue("u_impact");
+   var urg = g_form.getValue("u_urgency");
+
+   if(imp == "high" && urg == "high"){
+	g_form.setValue("priority","1");
+   }
+   else if((imp == "high" && urg == "medium") || (imp == "medium" && urg == "high")){
+	g_form.setValue("priority","2")
+   }
+   else if((imp == "high" && urg == "low") || (imp == "medium" && urg == "medium") || (imp == "low" && urg == "high")){
+	g_form.setValue("priority","3");
+   }
+   else if((imp == "medium" && urg == "low") || (imp == "low" && urg == "medium")){
+	g_form.setvalue("priority","4")
+   }
+   else if(imp == "low" && urg == "low"){
+	g_form.setValue("priority","5")
+   }
+   
+}
+
+###Urgency
+
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+   var imp = g_form.getValue("u_impact");
+   var urg = g_form.getValue("u_urgency");
+
+   if(imp == "high" && urg == "high"){
+	g_form.setValue("priority","1");
+   }
+   else if((imp == "high" && urg == "medium") || (imp == "medium" && urg == "high")){
+	g_form.setValue("priority","2")
+   }
+   else if((imp == "high" && urg == "low") || (imp == "medium" && urg == "medium") || (imp == "low" && urg == "high")){
+	g_form.setValue("priority","3");
+   }
+   else if((imp == "medium" && urg == "low") || (imp == "low" && urg == "medium")){
+	g_form.setvalue("priority","4")
+   }
+   else if(imp == "low" && urg == "low"){
+	g_form.setValue("priority","5")
+   }
+   
+}
+
+###Priority - onLoad
+
+function onLoad() {
+   //Type appropriate comment here, and begin script below
+
+   var imp = g_form.getValue("u_impact");
+   var urg = g_form.getValue("u_urgency");
+
+   if(imp == "high" && urg == "high"){
+	g_form.setValue("priority","1");
+   }
+   
+}
