@@ -37,11 +37,11 @@ Used Work Notes to record internal updates and activity for Problem records.
 
 ## Screenshots
 
-Screenshots of the Problem Management System configuration and implementation are available in the `PMS Screenshots` folder.
+Screenshots of the Problem Management System configuration and implementation are available in the "PMS Screenshots" folder.
 
 ## Scripts
 
-The `Scripts` folder contains the Client Script and Business Rule with GlideRecord used in this project.
+The "Scripts" folder contains the Client Script and Business Rule with GlideRecord used in this project.
 
 ## Tools Used
 
